@@ -1,0 +1,238 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} %graphics envoirnment creation
+\usepackage{tocbibind}
+\pagenumbering{roman} %Setting the Page number
+\usepackage{color}%to use color
+\usepackage{hyperref} %Defining the subsections as links
+\usepackage{fancyhdr}%to use header and footer in file
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\begin{document}
+
+
+
+\begin{center}
+{
+{\huge{\textbf{Assingment Report}}}  %defining Front page
+\textbf{TELECOMMUNICATION SOFTWARE LAB} \\
+\textcolor{black}{\rule{\textwidth}{2pt}}
+1st SEMESTER\\
+2016\\
+\bigskip  %for skipping lines
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+AKARSH AGRAWAL\\
+2016JTM2092\\
+
+\bigskip
+\bigskip
+\large{
+Programming Assingment :7\\
+Due Date:12.09.2016\\
+}
+}
+\vspace{9mm} %setting vertical space
+\includegraphics[width=4cm, height=4cm]{log.png} %entering logo
+\end{center}
+
+
+
+
+\newpage
+\begin{center}
+\renewcommand*\contentsname{Table of Contents} %Renaming Contents to Table of contents
+ %Defining Table of contents
+\tableofcontents
+\end{center}
+
+\newpage %For new page
+\large{
+\begin{center}
+\listoffigures
+\end{center}
+
+\newpage
+\begin{center}
+\pagenumbering{arabic} %changing the page numbering style
+\section{Introduction} %Defining sections 
+\end{center}
+\textbf{Python (programming language):}Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java. The language provides constructs intended to enable writing clear programs on both a small and large scale.\\
+Python supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles. It features a dynamic type system and automatic memory management and has a large and comprehensive standard library.\\Python interpreters are available for many operating systems, allowing Python code to run on a wide variety of systems. Using third-party tools, such as Py2exe or Pyinstaller, Python code can be packaged into stand-alone executable programs for some of the most popular operating systems, so Python-based software can be distributed to, and used on, those environments with no need to install a Python interpreter.\\CPython, the reference implementation of Python, is free and open-source software and has a community-based development model, as do nearly all of its variant implementations. CPython is managed by the non-profit Python Software Foundation.
+
+
+
+
+
+\newpage
+\section{Problem statement1} %Defining sections 
+Write a Python program that can take a big string (with spaces) as input from the command line and count number of times a word occurs in the string and also print the top 3 words in terms of their frequency of count.
+Also print the next permutation of each word appearing in the string.
+
+{
+
+\subsection{Implementation problem1}
+\begin{enumerate}
+\item{Input the string using the rawinput}
+\item{Split string in to words so that each could act as list }
+\item{Count the word occurences in the string using loop and count prebuild functions}
+\item{append the values as dictionary  }
+\item{sort the dictionary and print the last three elements}
+\item{Use pemutation inbuilt function}
+
+\end{enumerate}
+ \newpage
+\subsection{Input}   %Defining subsections
+my my name name is akarsh akarsh akarsh 
+
+
+\subsection{Output}
+akarsh: 3\\
+my: 2\\
+name: 2\\
+ym\\
+ym\\
+naem\\
+naem\\
+si\\
+akarhs\\
+akarhs\\
+akarhs\\
+
+ 
+\begin{figure}[H]
+{
+ \centering
+\includegraphics[scale=0.8]{output1.png}
+\caption{sorted and pemutated words}
+\vspace{2cm}
+
+}
+\end{figure}
+
+
+
+\newpage
+\section{Problem statement2} %Defining sections 
+
+You are designing a Graphical user Interface (GUI) to depict the location of a mobile user in a square whose corner points are (1,1) (-1,1) (1,-1)(-1,-1). In real life, the user’s location would come from a database available with the MSC. For the moment, generate the user location using the random function generator function in Python to generate a number between [0,1). 
+
+Using following code generate points inside this 2D shape.(import random)
+
+ (X,Y)=(random.random()*2- 1, random.random()*2-1)
+
+ Here, each point in above shape has an equal chance of being generated.
+Finally calculate number of points that lie inside unit radius circle in terms of percentage.
+
+\subsection{Implementation problem2}
+\begin{enumerate}
+\item{Generate the 100 users for example using random fucntion}
+\item{check for the condition in circle equation whether point lie inside or not}
+\item{if point lie inside increment teh counter and outpout the percentage}
+\end{enumerate}
+{
+
+
+
+\subsection{Output}
+\begin{figure}[H]
+{
+ \centering
+\includegraphics[scale=0.55]{output2.png}
+\caption{no of users calculation within unit radius}
+\vspace{2cm}
+
+}
+\end{figure}
+
+
+
+\newpage
+\section{Problem statement3} %Defining sections 
+
+You have to design an addressing code for a shipping company that works all around India. The address given by the customer is split into fields of name,city,district
+Create a database with some default addresses.
+The database should be editable(Add, delete, modify).
+Also notify any discrepancy in data to the employee if the address is invalid or do not exist in the database.
+First is machine readable like barcodes, in the form 1’s and 0’s as:\\
+IIT Roorkee  = 001\\
+Roorkee= 010\\
+Uttarakhand = 100\\
+Second is human readable, build by combination of first three letters of a place.\\
+For example :\\
+Prof. Ram Mishra\\
+D - 15, North Enclave\\
+IIT Roorkee, Roorkee\\
+Uttarakhand\\
+Hence the generated gives the collection center no. \\CCNO = 100010001\\
+Hence human readable code\\ H-CC-NO = $ UTT-ROO-IIT-100010001$
+\subsection{Implementation problem3}
+\begin{enumerate}
+\item{create a data base using doctionaries}
+\item{map for the encoded part of the dictionaries values}
+\item{ask for input from the user}
+\item{is input matches with the user input route the map}
+\item{output the encoded text both for user and machine}
+
+\end{enumerate}
+{
+
+\subsection{Input}   %Defining subsections
+kanpur\\
+dhaulpur\\
+UP\\
+
+\subsection{Output}
+\begin{figure}[H]
+{
+ \centering
+\includegraphics[scale=0.55]{output3_2.png}
+\caption{Enquiry output}
+\vspace{2cm}
+
+}
+\end{figure}
+
+
+\begin{center}
+\newpage
+\section{References and Citations}
+\end{center}
+
+
+\begin{thebibliography}{9}
+
+ 
+\bibitem{grymoire}
+python\\
+ \texttt{https://www.python.org/}
+ 
+ \bibitem{tutorial point}
+python tutorials\\
+\textit{https://www.codecademy.com/learn/python}
+
+ 
+ 
+ \bibitem{programming}
+about python\\
+ \texttt{www.learnpython.org/}
+
+
+
+\end{thebibliography}
+
+
+\begin{center}
+\newpage
+\section{Epilogue}
+\end{center}
+\begin{enumerate}
+\item{Inbuilt functions used for the string ,list ,dictionary behave differently for different python versions}
+\item{Strings and tuples and immutable in python}
+\end{enumerate}
+
+\end{document} %end of document
